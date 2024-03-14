@@ -1,6 +1,6 @@
-import { Outlet, useLocation, useNavigate } from "react-router-dom";
-import { AppBar, IconButton, Toolbar, Typography } from "@mui/material";
 import { ArrowBack } from "@mui/icons-material";
+import { Outlet, useLocation, useNavigate } from "react-router-dom";
+import { AppBar, Box, IconButton, Toolbar, Typography } from "@mui/material";
 
 export function Layout() {
   const location = useLocation();
@@ -8,7 +8,7 @@ export function Layout() {
 
   return (
     <>
-      <AppBar position="static">
+      <AppBar>
         <Toolbar>
           {location.pathname !== "/" ? (
             <IconButton
@@ -22,7 +22,9 @@ export function Layout() {
           <Typography>MRBC Evangelism</Typography>
         </Toolbar>
       </AppBar>
-      <Outlet />
+      <Box mt={8}>
+        <Outlet />
+      </Box>
     </>
   );
 }

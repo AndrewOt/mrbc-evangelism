@@ -43,11 +43,11 @@ export function ContactForm() {
 
   return (
     <Box>
-      <Typography variant="h3" mb={1}>
+      <Typography variant="h4" mb={1} ml={1.5}>
         Enter Contact
       </Typography>
       <Form onSubmit={handleSubmit((data) => console.log(data))}>
-        <Stack mr={3} spacing={3}>
+        <Stack spacing={3} sx={{ mx: 1.5, mb: 3 }}>
           <Controller
             defaultValue=""
             control={control}
