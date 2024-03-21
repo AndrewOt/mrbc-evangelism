@@ -5,15 +5,18 @@ export enum VisitIndicator {
   Muslim = "MUS - Muslim",
   Mormon = "MOR - Mormon",
   Catholic = "CATH - Catholic",
+  GaveBible = "GB - Gave Bible",
+  LeftTract = "LT - Left Tract",
   NoResponse = "NR - No Response",
   NoSoliciting = "NS - No Soliciting",
   SharedGospel = "SG - Shared Gospel",
+  LeftBrochure = "LB - Left Brochure",
   NotInterested = "NI - Not Interested",
   JehovahWitness = "JW - Jehovah Witness",
   SharedTestimony = "ST - Shared Testimony",
   UnwillingToTalk = "UTT - Unwilling To Talk",
   ProfessingBeliever = "PB - Professing Believer",
-  LeftBrochureTract = "LB/LT - Left Brochure/Tract",
+  RequestReturnVisit = "RRV - Request Return Visit",
   MemberOfAnotherChurch = "MAC - Member of another church",
 }
 
@@ -31,8 +34,14 @@ export function getValueFromVisitIndicatorKey(key: string) {
       return VisitIndicator.Mormon;
     case "Catholic":
       return VisitIndicator.Catholic;
+    case "LeftTract":
+      return VisitIndicator.LeftTract;
+    case "GaveBible":
+      return VisitIndicator.GaveBible;
     case "NoResponse":
       return VisitIndicator.NoResponse;
+    case "LeftBrochure":
+      return VisitIndicator.LeftBrochure;
     case "NoSoliciting":
       return VisitIndicator.NoSoliciting;
     case "SharedGospel":
@@ -47,8 +56,8 @@ export function getValueFromVisitIndicatorKey(key: string) {
       return VisitIndicator.UnwillingToTalk;
     case "ProfessingBeliever":
       return VisitIndicator.ProfessingBeliever;
-    case "LeftBrochureTract":
-      return VisitIndicator.LeftBrochureTract;
+    case "RequestReturnVisit":
+      return VisitIndicator.RequestReturnVisit;
     case "MemberOfAnotherChurch":
       return VisitIndicator.MemberOfAnotherChurch;
     default:

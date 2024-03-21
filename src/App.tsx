@@ -1,4 +1,4 @@
-import { Map } from "./pages/Map";
+import { Map } from "./pages/MapPage";
 import { Layout } from "./Layout";
 import { Home } from "./pages/Home";
 import { ContactForm } from "./pages/ContactForm";
