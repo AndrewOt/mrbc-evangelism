@@ -1,9 +1,9 @@
 import { ReactElement } from "react";
-import { Wrapper, Status } from "@googlemaps/react-wrapper";
+import { Status, Wrapper } from "@googlemaps/react-wrapper";
 
 const RenderStatus = (status: Status): ReactElement => <div>{status}</div>;
 
-export function Map() {
+export default function Map() {
   return (
     <>
       <Wrapper

@@ -1,4 +1,6 @@
+import { AppBar, Typography, Box, Toolbar } from "@mui/material";
 import { Metadata } from "next";
+import BackButton from "../components/BackButton";
 
 export const metadata: Metadata = {
   title: "MRBC Evangelism",
@@ -12,8 +14,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <div id="root">{children}</div>
-        {/* <script type="module" src="/src/main.tsx"></script> */}
+        <AppBar>
+          <Toolbar>
+            <BackButton />
+            <Typography>MRBC Evangelism</Typography>
+          </Toolbar>
+        </AppBar>
+        <Box mt={8}>{children}</Box>
       </body>
     </html>
   );

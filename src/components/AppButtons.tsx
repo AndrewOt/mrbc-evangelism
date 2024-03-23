@@ -1,7 +1,9 @@
+"use client";
+
 import { Button } from "@mui/material";
 import { forwardRef } from "react";
-import { Link } from "react-router-dom";
-import type { LinkProps } from "react-router-dom";
+import Link from "next/link";
+import type { LinkProps } from "next/link";
 
 export interface AppButtonProps {
   url: string;
@@ -12,10 +14,10 @@ const RouterLink = forwardRef<HTMLAnchorElement, LinkProps>((props, ref) => (
   <Link ref={ref} {...props} role={undefined} />
 ));
 
-export function AppButton({ text, url }: AppButtonProps) {
+export function AppLinkButton({ text, url }: AppButtonProps) {
   return (
     <Button
-      to={url}
+      href={url}
       variant="contained"
       component={RouterLink}
       sx={{ width: "100%", height: "100%" }}

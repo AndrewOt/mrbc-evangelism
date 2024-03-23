@@ -1,14 +1,15 @@
-import { Box, Button, Stack, TextField, Typography } from "@mui/material";
-import { useCallback, useState } from "react";
-import type { MouseEvent } from "react";
-import { Controller, useForm, useWatch } from "react-hook-form";
-import { ErrorMessage } from "@hookform/error-message";
-import { Form } from "react-router-dom";
-import { CommentsPreview } from "../components/CommentsPreview";
-import { VisitChip } from "../components/VisitChip";
-import { VisitIndicator } from "../enums";
+"use client";
 
-export function ContactForm() {
+import type { MouseEvent } from "react";
+import { ErrorMessage } from "@hookform/error-message";
+import { Box, Typography, Stack, TextField, Button } from "@mui/material";
+import { useState, useCallback } from "react";
+import { Controller, useForm, useWatch } from "react-hook-form";
+import { CommentsPreview } from "../../components/CommentsPreview";
+import { VisitChip } from "../../components/VisitChip";
+import { VisitIndicator } from "../../enums";
+
+export default function NewContact() {
   const {
     control,
     register,
@@ -46,7 +47,8 @@ export function ContactForm() {
       <Typography variant="h4" mb={1} ml={1.5}>
         Enter Contact
       </Typography>
-      <Form onSubmit={handleSubmit((data) => console.log(data))}>
+      {/* <Form onSubmit={handleSubmit((data) => console.log(data))}> */}
+      <form onSubmit={handleSubmit((data) => console.log(data))}>
         <Stack spacing={3} sx={{ mx: 1.5, mb: 3 }}>
           <Controller
             defaultValue=""
@@ -214,7 +216,7 @@ export function ContactForm() {
             Submit
           </Button>
         </Stack>
-      </Form>
+      </form>
     </Box>
   );
 }

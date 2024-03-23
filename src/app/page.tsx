@@ -1,18 +1,18 @@
 import { Box, Grid } from "@mui/material";
-import { AppButton } from "../components/AppButtons";
+import { AppLinkButton } from "../components/AppButtons";
 
-export function Home() {
+export default function Home() {
   return (
     <Box sx={{ height: "100%", textAlign: "center", mt: "50%" }}>
       <Grid container spacing={2} px={1}>
         <Grid item xs={6}>
-          <AppButton text="New Contact" url="new-contact" />
+          <AppLinkButton text="New Contact" url="new-contact" />
         </Grid>
         <Grid item xs={6}>
-          <AppButton text="Evangelism Resources" url="evangelism-resources" />
+          <AppLinkButton text="Evangelism Resources" url="resources" />
         </Grid>
         <Grid item xs={9}>
-          <AppButton text="Map" url="map" />
+          <AppLinkButton text="Map" url="map" />
         </Grid>
       </Grid>
     </Box>
