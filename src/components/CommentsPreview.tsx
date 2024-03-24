@@ -23,12 +23,19 @@ export function CommentsPreview({
   registerFormFunc,
   onDeleteIndicator,
 }: CommentsPreviewProps) {
-  const indicatorElements = visitIndicators.map((indicator) => (
-    <VisitChip
-      key={indicator}
-      indicator={indicator}
-      onDeleteIndicator={onDeleteIndicator}
-    />
+  const indicatorElements = visitIndicators.map((indicator, index) => (
+    <Box
+      key={`selected-${indicator}-${index}`}
+      sx={{ display: "inline-block", mb: 1, mx: 1 }}
+    >
+      <Typography>
+        <VisitChip
+          key={indicator}
+          indicator={indicator}
+          onDeleteIndicator={onDeleteIndicator}
+        />
+      </Typography>
+    </Box>
   ));
 
   useEffect(() => {
@@ -38,7 +45,7 @@ export function CommentsPreview({
   return (
     <Box>
       <input {...registerFormFunc("indicators")} type="hidden" />
-      <Typography>{indicatorElements}</Typography>
+      {indicatorElements}
       <Box>
         <Typography>{text}</Typography>
       </Box>
